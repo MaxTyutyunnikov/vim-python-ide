@@ -4,8 +4,8 @@ set hidden
 set showtabline=0
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+set rtp+=~/.vim-python/bundle/Vundle.vim
+call vundle#begin('~/.vim-python/bundle')
 
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
@@ -252,7 +252,7 @@ let g:DevIconsEnableFolderExtensionPatternMatching = 0
 "=====================================================
 "" SnipMate settings
 "=====================================================
-let g:snippets_dir='~/.vim/vim-snippets/snippets'
+let g:snippets_dir='~/.vim-python/vim-snippets/snippets'
 
 "=====================================================
 "" Rainbow Parentheses Autoload 

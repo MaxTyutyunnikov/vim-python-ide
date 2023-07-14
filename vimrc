@@ -38,7 +38,6 @@ Plugin 'kien/rainbow_parentheses.vim'       " Rainbow Parentheses
 Plugin 'ryanoasis/vim-devicons'             " Dev Icons
 Plugin 'mhinz/vim-startify'                 " Vim Start Page
 "-------------------=== Snippets support ===--------------------
-Plugin 'garbas/vim-snipmate'                " Snippets manager
 Plugin 'MarcWeber/vim-addon-mw-utils'       " dependencies #1
 Plugin 'tomtom/tlib_vim'                    " dependencies #2
 Plugin 'honza/vim-snippets'                 " snippets repo
@@ -68,7 +67,7 @@ if filereadable(expand("~/.vimrc_background"))
 endif
 set encoding=utf-8
 set t_Co=256                                " 256 colors
-set guifont=mononoki\ Nerd\ Font\ 18
+"""" set guifont=mononoki\ Nerd\ Font\ 18
 colorscheme wombat256mod                    " set vim colorscheme
 let g:airline_theme='wombat'                " set airline theme
 syntax enable                               " enable syntax highlighting
@@ -248,12 +247,6 @@ let g:DevIconsEnableFolderPatternMatching = 1
 " enable file extension pattern matching glyphs on folder/directory (disabled by default with 0)
 let g:DevIconsEnableFolderExtensionPatternMatching = 0
 
-
-"=====================================================
-"" SnipMate settings
-"=====================================================
-let g:snippets_dir='~/.vim-python/vim-snippets/snippets'
-
 "=====================================================
 "" Rainbow Parentheses Autoload 
 "=====================================================
@@ -266,13 +259,13 @@ au Syntax * RainbowParenthesesLoadBraces
 "" Indent Guides Settings 
 "=====================================================
 set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
+
 "=====================================================
 "" Python settings
 "=====================================================
 
 " python executables for different plugins
 let g:pymode_python='python'
-
 
 nmap <leader>g :YcmCompleter GoTo<CR>
 nmap <leader>d :YcmCompleter GoToDefinition<CR>
@@ -345,27 +338,27 @@ let g:pymode_run=1
 let g:pymode_run_bind='<F5>'
 
 let g:ale_sign_column_always = 0
-let g:ale_emit_conflict_warnings = 0                                                                         
+let g:ale_emit_conflict_warnings = 0
 let g:airline#extensions#ale#enabled = 1
 let g:pymode_rope_lookup_project = 0
 let g:airline#extensions#tabline#enabled = 1
 
 imap <F5> <Esc>:w<CR>:!clear;python %<CR>
 
-no <down> <Nop>
-no <left> <Nop>
-no <right> <Nop>
-no <up> <Nop>
+""""no <down> <Nop>
+""""no <left> <Nop>
+""""no <right> <Nop>
+""""no <up> <Nop>
 
-ino <down> <Nop>
-ino <left> <Nop>
-ino <right> <Nop>
-ino <up> <Nop>
+""""ino <down> <Nop>
+""""ino <left> <Nop>
+""""ino <right> <Nop>
+""""ino <up> <Nop>
 
-vno <down> <Nop>
-vno <left> <Nop>
-vno <right> <Nop>
-vno <up> <Nop>
+""""vno <down> <Nop>
+""""vno <left> <Nop>
+""""vno <right> <Nop>
+""""vno <up> <Nop>
 
 
 autocmd StdinReadPre * let g:isReadingFromStdin = 1
